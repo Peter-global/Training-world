@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BizLeap Hub - Explore Courses">
+    <title>Courses - BizLeap Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        display: flex;
+        background: #f4f4f4;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+        width: 250px;
+        background: #1a73e8;
+        color: white;
+        height: 100vh;
+        padding: 2rem 1rem;
+        position: fixed;
+    }
+
+    .sidebar-logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    .sidebar nav a {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0.5rem;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .sidebar nav a i {
+        margin-right: 1rem;
+    }
+
+    .sidebar nav a.active,
+    .sidebar nav a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Content */
+    .main-content {
+        margin-left: 250px;
+        padding: 2rem;
+        width: calc(100% - 250px);
+    }
+
+    /* Header Section */
+    .header {
+        background: white;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    /* Search Bar */
+    .search-bar {
+        display: flex;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .search-input {
+        flex: 1;
+        padding: 0.5rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .search-btn {
+        background: #1a73e8;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .search-btn:hover {
+        background: #155cb0;
+    }
+
+    /* Categories Section */
+    .categories {
+        margin-bottom: 2rem;
+    }
+
+    .categories h2 {
+        margin-bottom: 1rem;
+    }
+
+    .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .category-btn {
+        padding: 0.5rem 1rem;
+        background: #f0f0f0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .category-btn:hover {
+        background: #1a73e8;
+        color: white;
+        border-color: #1a73e8;
+    }
+
+    /* Courses Section */
+    .courses h2 {
+        margin-bottom: 1rem;
+    }
+
+    .course-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .course-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-card h3 {
+        margin-bottom: 0.5rem;
+        color: #1a73e8;
+    }
+
+    .course-card p {
+        color: #555;
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        background: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #155cb0;
+    }
+
+    /* Enlarge the course card when it matches the search */
+    .course-card.enlarged {
+        transform: scale(1.1);
+        /* Slightly enlarge the card */
+        border: 2px solid #1a73e8;
+        /* Add a highlight border */
+        transition: transform 0.3s ease, border 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        /* Add a shadow effect */
+    }
+</style>
+
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">BizLead</div>
+        <nav>
+            <a href="dashbord.html"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="#courses.html" class="active"><i class="fas fa-book"></i> Courses</a>
+            <a href="#progress.html"><i class="fas fa-chart-line"></i> Progress</a>
+            <a href="#messages.html"><i class="fas fa-envelope"></i> Messages</a>
+            <a href="#settings.html"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Explore Courses</h1>
+            <p>Choose from a wide range of business and technical courses to upskill yourself.</p>
+        </header>
+
+        <!-- Search Bar -->
+        <section class="search-bar">
+            <input type="text" placeholder="Search for courses..." class="search-input">
+            <button class="btn search-btn"><i class="fas fa-search"></i> Search</button>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-list">
+            <button class="category-btn">Business</button>
+                <button class="category-btn">Marketing</button>
+                <button class="category-btn">Finance</button>
+                <button class="category-btn">Leadership</button>
+                <button class="category-btn">Technology</button>
+                <button class="category-btn">Strategy</button>
+            </div>
+        </section>
+
+        <!-- Course List -->
+        <section class="courses">
+            <h2>Available Courses</h2>
+            <div class="course-list">
+                <div class="course-card">
+                    <h3>Marketing Strategies</h3>
+                    <p><strong>Instructor:</strong> Sunday Peterglobal</p>
+                    <p>Learn how to build successful marketing campaigns to grow your business.</p>
+                    <button class="btn">Start Course</button>
+                </div>
+                <div class="course-card">
+                    <h3>Financial Analysis</h3>
+                    <p><strong>Instructor:</strong> Sunday Peterglobalr</p>
+                    <p>Master financial analysis techniques to make informed business decisions.</p>
+                    <button class="btn">Resume Course</button>
+                </div>
+                <div class="course-card">
+                    <h3>Leadership Skills</h3>
+                    <p><strong>Instructor:</strong> Sunday Peterglobal</p>
+                    <p>Develop leadership qualities to inspire and lead high-performing teams.</p>
+                    <button class="btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <h3>Tech in Business</h3>
+                    <p><strong>Instructor:</strong> Sunday Peterglobal</p>
+                    <p>Learn how to integrate technology effectively into your business strategy.</p>
+                    <button class="btn">Start Now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>// Wait for the DOM to fully load
+    document.addEventListener("DOMContentLoaded", () => {
+        // Elements
+        const searchInput = document.querySelector(".search-input");
+        const searchBtn = document.querySelector(".search-btn");
+        const courseCards = document.querySelectorAll(".course-card");
+
+        // Search functionality
+        const searchCourses = () => {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+
+            if (searchTerm === "") {
+                // Show all courses if search input is empty
+                courseCards.forEach(card => {
+                    card.style.display = "block";
+                    card.classList.remove("enlarged");
+                });
+            } else {
+                // Filter courses based on the search term
+                courseCards.forEach(card => {
+                    const courseTitle = card.querySelector("h3").textContent.toLowerCase();
+                    const courseDescription = card.querySelector("p").textContent.toLowerCase();
+
+                    // Match search term in the course title or description
+                    if (courseTitle.includes(searchTerm) || courseDescription.includes(searchTerm)) {
+                        card.style.display = "block";
+                        card.classList.add("enlarged"); // Add class to enlarge card
+                    } else {
+                        card.style.display = "none";
+                        card.classList.remove("enlarged"); // Remove enlarge effect
+                    }
+                });
+            }
+        };
+
+        // Event listener for the search button
+        searchBtn.addEventListener("click", () => {
+            searchCourses();
+        });
+
+        // Optional: Trigger search when the user types and presses Enter
+        searchInput.addEventListener("keyup", (event) => {
+            if (event.key === "Enter") {
+                searchCourses();
+            }
+        });
+    });
+
+</script>
+
+</html>

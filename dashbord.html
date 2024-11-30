@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BizLeap Hub - Interactive tutoring platform for business skills">
+    <title>BizLeap Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/674afb1e4304e3196aeacbdf/1idue9ski';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+<style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #333;
+        display: flex;
+        background: #f4f4f4;
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+        width: 250px;
+        background: #1a73e8;
+        color: white;
+        height: 100vh;
+        padding: 2rem 1rem;
+        position: fixed;
+    }
+
+    .sidebar-logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+    }
+
+    .sidebar nav a {
+        display: flex;
+        align-items: center;
+        padding: 1rem 0.5rem;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    .sidebar nav a i {
+        margin-right: 1rem;
+    }
+
+    .sidebar nav a.active,
+    .sidebar nav a:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Content */
+    .main-content {
+        margin-left: 250px;
+        padding: 2rem;
+        width: calc(100% - 250px);
+    }
+
+    /* Header Section */
+    .header {
+        background: white;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .welcome-message h2 {
+        font-size: 1.8rem;
+    }
+
+    .header .welcome-message span {
+        color: #1a73e8;
+    }
+
+    /* Dashboard Section */
+    .dashboard h3 {
+        margin-bottom: 1rem;
+    }
+
+    .stats {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .stat-card {
+        background: white;
+        flex: 1;
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #666;
+    }
+
+    .stat-card p {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #1a73e8;
+    }
+
+    /* Courses Section */
+    .courses {
+        margin-top: 2rem;
+    }
+
+    .courses h3 {
+        margin-bottom: 1rem;
+    }
+
+    .course-list {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .course-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .course-card h4 {
+        margin-bottom: 0.5rem;
+    }
+
+    .course-card p {
+        color: #666;
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        background: #1a73e8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #155cb0;
+    }
+</style>
+
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">TRAIN<br>YOURSELF</div>
+        <nav>
+            <a href="#dashboard" class="active"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="courses.html"><i class="fas fa-book"></i> Courses</a>
+            <a href="#progress"><i class="fas fa-chart-line"></i> Progress</a>
+            <a href="#certificatee"><i class="fas fa-certificate"></i> Certificates</a>
+            <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="welcome-message">
+                <h2>Welcome back, <span>USER!</span></h2>
+                <p>Here's an overview of your progress today.</p>
+            </div>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="dashboard">
+            <h3>Your Dashboard</h3>
+            <div class="stats">
+                <div class="stat-card">
+                    <h4>Courses Enrolled</h4>
+                    <p>5</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Hours Studied</h4>
+                    <p>14</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Achievements</h4>
+                    <p>3 Badges</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Recommendations -->
+        <section id="courses" class="courses">
+            <h3>What do I have today</h3>
+            <div class="course-list">
+                <div class="course-card">
+                    <h4>Marketing Strategies</h4>
+                    <p>Instructor: Sunday Peter</p>
+                    <button class="btn">Start Course</button>
+                </div>
+                <div class="course-card">
+                    <h4>Financial Analysis</h4>
+                    <p>Instructor: Sunday Peter</p>
+                    <button class="btn">Resume Course</button>
+                </div>
+                <div class="course-card">
+                    <h4>Leadership Skills</h4>
+                    <p>Instructor: Sunday Peter</p>
+                    <button class="btn">Enroll Now</button>
+                </div>
+                <div class="course-card">
+                    <h4>Tech in Business</h4>
+                    <p>Instructor: Sunday Peter</p>
+                    <button class="btn">start now</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
